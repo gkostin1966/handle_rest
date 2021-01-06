@@ -34,8 +34,9 @@ class HandleService
     if response.success?
       true
     else
-      error = JSON.parse(response.body)
-      raise "#{error['responseCode']}: #{error['message']}"
+      # error = JSON.parse(response.body)
+      # raise "#{error['responseCode']}: #{error['message']}"
+      response
     end
   end
 
